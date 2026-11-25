@@ -29,13 +29,23 @@ class MainActivity : AppCompatActivity() {
 
         binding.switchEnabled.setOnCheckedChangeListener { _, checked ->
             Prefs.setEnabled(this, checked)
-            if (checked && !isAccessibilityServiceEnabled()) {
-                Toast.makeText(
-                    this,
-                    getString(R.string.enable_service_prompt),
-                    Toast.LENGTH_LONG
-                ).show()
+            if (checked) {
+                MonitoringService.start(this)
+                if (!isAccessibilityServiceEnabled()) {
+                    Toast.makeText(
+                        this,
+                        getString(R.string.enable_service_prompt),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            } else {
+                MonitoringService.stop(this)
             }
+        }
+
+        // If monitoring was left on, make sure the banner is showing.
+        if (Prefs.isEnabled(this)) {
+            MonitoringService.start(this)
         }
 
         binding.accessibilityButton.setOnClickListener {
@@ -66,6 +76,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        // Reflect the real monitoring state in case it was turned off from the
+        // notification banner while the app was in the background.
+        val enabled = Prefs.isEnabled(this)
+        if (binding.switchEnabled.isChecked != enabled) {
+            binding.switchEnabled.isChecked = enabled
+        }
         updateStatusLabel()
     }
 

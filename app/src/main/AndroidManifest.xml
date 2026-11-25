@@ -52,5 +52,15 @@
                 android:value="Keeps the screen awake and sounds an alarm when a user-defined keyword is detected on screen." />
         </service>
 
+        <!-- Foreground service that shows the persistent "monitoring on" banner -->
+        <service
+            android:name=".MonitoringService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Shows an ongoing notification while keyword monitoring is active, with a button to stop monitoring." />
+        </service>
+
     </application>
 </manifest>
