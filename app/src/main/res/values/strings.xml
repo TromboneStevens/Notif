@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keyword Alarm</string>
+    <string name="accessibility_service_label">Keyword Alarm detector</string>
+    <string name="accessibility_service_desc">Reads on-screen text in the watched browser so it can alert you when one of your keywords appears. Text is only matched on-device and never leaves your phone.</string>
+
+    <string name="keywords_hint">Keywords (comma-separated)</string>
+    <string name="keywords_placeholder">e.g. restock, in stock, available</string>
+    <string name="enable_monitoring">Enable monitoring</string>
+    <string name="keep_awake">Keep screen awake during alarm</string>
+    <string name="case_sensitive">Case-sensitive matching</string>
+    <string name="cooldown_hint">Cooldown between alarms (seconds)</string>
+    <string name="save">Save settings</string>
+    <string name="open_accessibility">Open Accessibility settings</string>
+    <string name="test_alarm">Test alarm</string>
+    <string name="stop_alarm">Stop alarm</string>
+    <string name="saved">Settings saved</string>
+
+    <string name="status_ok">Status: service enabled and ready.</string>
+    <string name="status_needs_service">Status: accessibility service NOT enabled. Tap \"Open Accessibility settings\" and turn on \"Keyword Alarm detector\".</string>
+    <string name="enable_service_prompt">Now enable the accessibility service: Open Accessibility settings and turn on \"Keyword Alarm detector\".</string>
+
+    <string name="alarm_channel_name">Keyword alarm</string>
+    <string name="alarm_channel_desc">Fires when a configured keyword is detected on screen.</string>
+    <string name="notif_detected">Keyword detected: %1$s</string>
+    <string name="notif_detected_generic">Keyword detected on screen</string>
+</resources>
