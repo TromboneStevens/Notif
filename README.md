@@ -53,6 +53,7 @@ JDKs yet).
 |-------|------|
 | `KeywordAccessibilityService` | Watches the configured browser, reads visible text nodes, matches your keywords (with a cooldown + scan rate-limit). |
 | `AlarmService` | Foreground service that vibrates, loops the alarm sound, and holds a screen wake lock. Posts a high-priority, full-screen notification with a **Stop** action. |
+| `MonitoringService` | While monitoring is on, shows a persistent, silent notification banner with a **Stop monitoring** button so you can turn it off from the shade. |
 | `MainActivity` | Settings UI: keywords, enable toggle, cooldown, keep-awake, case-sensitivity, plus Test/Stop buttons. |
 | `Prefs` | Shared settings store. |
 

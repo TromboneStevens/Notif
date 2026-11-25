@@ -24,4 +24,10 @@
     <string name="alarm_channel_desc">Fires when a configured keyword is detected on screen.</string>
     <string name="notif_detected">Keyword detected: %1$s</string>
     <string name="notif_detected_generic">Keyword detected on screen</string>
+
+    <string name="monitoring_channel_name">Monitoring status</string>
+    <string name="monitoring_channel_desc">Ongoing banner shown while keyword monitoring is active.</string>
+    <string name="monitoring_title">Keyword monitoring is on</string>
+    <string name="monitoring_text">Watching for your keywords. Tap to open, or Stop to turn off.</string>
+    <string name="stop_monitoring">Stop monitoring</string>
 </resources>
